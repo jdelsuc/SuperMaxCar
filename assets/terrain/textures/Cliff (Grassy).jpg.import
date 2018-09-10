@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Cliff (Grassy).jpg-7a5d31b2c9483278129d4edad0f0fc44.stex"
+
+[deps]
+
+source_file="res://assets/terrain/textures/Cliff (Grassy).jpg"
+dest_files=[ "res://.import/Cliff (Grassy).jpg-7a5d31b2c9483278129d4edad0f0fc44.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
