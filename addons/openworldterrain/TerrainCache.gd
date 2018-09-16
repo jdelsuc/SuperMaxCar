@@ -176,6 +176,10 @@ func pos_to_ij(pos):
 ## PrivateMethods
 #########################################
 func generate_data ():
+
+	var dir = Directory.new()
+	if not dir.dir_exists(cache_dir):
+		dir.make_dir(cache_dir)
  
 	hm_img = Image.new()
 	hm_img.load(the_config.height_map)
@@ -271,3 +275,6 @@ func remove_patch(i,j):
 	
 	patches[i][j] = null
 
+func is_loaded(v):
+	return patches[v.x][v.y] != null
+	

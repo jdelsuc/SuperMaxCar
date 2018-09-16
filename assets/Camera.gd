@@ -5,14 +5,23 @@ export var max_dist = 15.0
 var car
 
 func _ready():
-	car = get_node("../TheCar")
+	car = weakref(get_node("../TheCar"))
+	print("ready")
 	
 func _process(delta):
 	
-	if not car or not car.visible:
+	var c=car.get_ref()
+	if not c:
+		car = weakref(get_node("../TheCar"))
+		c=car.get_ref()
+	
+	if not c:
 		return
 	
-	var target = car.get_transform().origin
+	if not c.visible:
+		return
+	
+	var target = c.get_transform().origin
 
 	
 	var cam = transform.origin

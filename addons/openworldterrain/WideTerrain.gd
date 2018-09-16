@@ -103,9 +103,14 @@ func _process(delta):
 		return
 	
 	if not is_ready:		
+
+		if not cache.is_loaded(cur_patch):
+			return
+
+
 		is_ready = true
 		var o = car.transform.origin
-		car.transform.origin = Vector3(o.x,cache.get_height(o)+1,o.z)
+		car.transform.origin = Vector3(o.x,cache.get_height(o)+2,o.z)
 		car.show()
 	else :
 #		update_curpatch()

@@ -7,7 +7,8 @@ extends TextureRect
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	get_node( "Button" ).connect( "pressed", self, "_button_pressed" )
+	get_node( "Button" ).connect( "pressed", self, "_gen_button_pressed" )
+	get_node( "Button2" ).connect( "pressed", self, "_exit_button_pressed" )
 
 func _process(delta):
 	var main_pg = get_node("MainPg")
@@ -17,8 +18,7 @@ func _process(delta):
 	main_pg.value = cache.prog
 	sub_pg.value = cache.sub_prog
 	
-func _button_pressed():
-	print("Pressed")
+func _gen_button_pressed():
 	var cache = get_node("/root/GenUI/TerrainCache")
 	
 	if cache.busy:
@@ -26,6 +26,13 @@ func _button_pressed():
 		return
 	
 	cache.generate_new_world()	
+
+func _exit_button_pressed():
+	var cache = get_node("/root/GenUI/TerrainCache")
+
+	if cache.busy:
+		print("busy")
+		return
 	
-#	get_tree().change_scene("res://assets/GUI/MainMenu.tscn")
+	get_tree().change_scene("res://assets/GUI/MainMenu.tscn")
 	

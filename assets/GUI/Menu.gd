@@ -22,7 +22,7 @@ func on_button_pressed(name):
 			get_tree().change_scene("res://assets/GUI/GenUI.tscn")
 			
 		"PlayNewBut":
-			print("Start new game")
+			get_tree().change_scene("res://CarEditor.tscn")
 
 		"ContBut":
 			print("Continue game")

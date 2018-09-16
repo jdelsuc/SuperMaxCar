@@ -17,3 +17,7 @@ config/icon="res://icon.png"
 [editor_plugins]
 
 enabled=PoolStringArray( "openworldterrain", "procars" )
+
+[rendering]
+
+threads/thread_model=2

@@ -33,9 +33,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 210.0
-margin_top = 140.0
+margin_top = 100.0
 margin_right = 870.0
-margin_bottom = 220.0
+margin_bottom = 180.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -54,16 +54,44 @@ flat = false
 align = 1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="MainPg" type="TextureProgress" parent="Menu" index="1"]
+[node name="Button2" type="Button" parent="Menu" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 210.0
+margin_top = 470.0
+margin_right = 870.0
+margin_bottom = 550.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.269012, 0.701075, 0.800781, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Exit"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="MainPg" type="TextureProgress" parent="Menu" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 290.0
-margin_top = 270.0
+margin_top = 230.0
 margin_right = 780.0
-margin_bottom = 330.0
+margin_bottom = 290.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -85,16 +113,16 @@ radial_center_offset = Vector2( 0, 0 )
 nine_patch_stretch = true
 _sections_unfolded = [ "Rect", "Textures" ]
 
-[node name="SubPg" type="TextureProgress" parent="Menu" index="2"]
+[node name="SubPg" type="TextureProgress" parent="Menu" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 290.0
-margin_top = 370.0
+margin_top = 330.0
 margin_right = 780.0
-margin_bottom = 430.0
+margin_bottom = 390.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
