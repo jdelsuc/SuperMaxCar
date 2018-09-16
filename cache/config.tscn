@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/openworldterrain/WorldConfig.gd" type="Script" id=1]
+[ext_resource path="res://addons/openworldterrain/terrain.png" type="Texture" id=2]
+
+[node name="WorldConfig" type="Node" index="0"]
+
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_icon": ExtResource( 2 )
+}
+height_map = "res://assets/terrain/Hills 1810 2.jpg"
+biome_map = "res://assets/terrain/Hills 1810 2_biome.jpg"
+mat = "res://assets/terrain/slatmap.tres"
+lib = "res://assets/terrain/terrain.meshlib"
+h_factor = 4.0
+v_factor = 100.0
+patch_size = Vector2( 32, 32 )
+offset = Vector2( 16, 16 )
+red_biome_indexes = {
+"Bush": 1,
+"Flower": 3,
+"Grass1": 1,
+"Rock1": 1,
+"Rock2": 1,
+"Rocks": 2
+}
+green_biome_indexes = {
+"Bush": 1,
+"Fence": 1,
+"Grass1": 1,
+"Grass2": 1,
+"Rocks": 1,
+"Tree1": 2,
+"Tree2": 2,
+"Tree3": 2
+}
+blue_biome_indexes = {
+"Fence": 2,
+"Grass1": 1,
+"Grass2": 1,
+"House1": 2,
+"House2": 2,
+"Tree3": 2
+}
+
+

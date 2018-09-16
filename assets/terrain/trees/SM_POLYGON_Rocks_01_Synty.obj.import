@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SM_POLYGON_Rocks_01_Synty.obj-edb724ccf1e03bd90ec82f4f3066e29a.mesh"
+
+[deps]
+
+files=[ "res://.import/SM_POLYGON_Rocks_01_Synty.obj-edb724ccf1e03bd90ec82f4f3066e29a.mesh" ]
+
+source_file="res://assets/terrain/trees/SM_POLYGON_Rocks_01_Synty.obj"
+dest_files=[ "res://.import/SM_POLYGON_Rocks_01_Synty.obj-edb724ccf1e03bd90ec82f4f3066e29a.mesh", "res://.import/SM_POLYGON_Rocks_01_Synty.obj-edb724ccf1e03bd90ec82f4f3066e29a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

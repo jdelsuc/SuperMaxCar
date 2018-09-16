@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=6 format=2]
 
 [ext_resource path="res://assets/terrain/splatmap.shader" type="Shader" id=1]
-[ext_resource path="res://assets/terrain/splatmap.png" type="Texture" id=2]
+[ext_resource path="res://assets/terrain/Hills 1810 2_splat.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/terrain/textures/water.png" type="Texture" id=3]
 [ext_resource path="res://assets/terrain/textures/Grass (Meadows).jpg" type="Texture" id=4]
 [ext_resource path="res://assets/terrain/textures/Cliff (Layered Rock).jpg" type="Texture" id=5]
@@ -10,7 +10,7 @@
 
 render_priority = 0
 shader = ExtResource( 1 )
-shader_param/texture_scale_factor = 100.0
+shader_param/texture_scale_factor = 400.0
 shader_param/text_R = ExtResource( 5 )
 shader_param/text_G = ExtResource( 4 )
 shader_param/text_B = ExtResource( 3 )

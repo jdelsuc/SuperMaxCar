@@ -16,9 +16,12 @@ func _process(delta):
 
 	var terrain = get_node("/root/Editor/TheTerrain")
 
+	var p = terrain.car.transform.origin
 
-	var t = String(terrain.car_pos_in_img) + "\r\n" 
-	t+= String(terrain.cur_patch) + "\r\n" 
+	var t = String(Vector3(int(p.x),int(p.y),int(p.z))) + "\r\n" 
+
+	t+= String(terrain.car_pos_in_img) + "\r\n" 
+	t+= String(terrain.cur_patch) + "\r\n" 	
 	t+= String(Performance.get_monitor(Performance.TIME_FPS)) + "\r\n"
 	t+= String(Performance.get_monitor(Performance.MEMORY_DYNAMIC_MAX))
 	

@@ -14,15 +14,15 @@ export var trunk_height_ratio	= 0.4
 export var engine_max			= 120
 
 #Images to be mapped to different part of the car
-export(String, FILE) var front_img = "res://front.png"
-export(String, FILE) var hood_img = "res://hood.png"
-export(String, FILE) var front_glass_img = "res://glass.png"
-export(String, FILE) var roof_img = "res://roof.png"
-export(String, FILE) var back_glass_img = "res://glass.png"
-export(String, FILE) var trunk_img = "res://hood.png"
-export(String, FILE) var back_img = "res://back.png"
-export(String, FILE) var bottom_img = "res://bottom.png"
-export(String, FILE) var side_img = "res://side.png"
+export(String, FILE) var front_img 			= "res://front.png"
+export(String, FILE) var hood_img 			= "res://hood.png"
+export(String, FILE) var front_glass_img 	= "res://glass.png"
+export(String, FILE) var roof_img 			= "res://roof.png"
+export(String, FILE) var back_glass_img 	= "res://glass.png"
+export(String, FILE) var trunk_img 			= "res://hood.png"
+export(String, FILE) var back_img 			= "res://back.png"
+export(String, FILE) var bottom_img 		= "res://bottom.png"
+export(String, FILE) var side_img 			= "res://side.png"
 
 
 #internal vars
@@ -343,39 +343,20 @@ func _enter_tree():
 	
 	put_wheels(vb)
 
-func _ready():
-	print_tree_pretty()
+
+func _physics_process(delta):	
+
+	var throttle = 0
+	var steer_val = 0
+	if Input.is_key_pressed(KEY_UP):
+		throttle = 1.0
+	if Input.is_key_pressed(KEY_DOWN):
+		throttle = -1.0
+	if Input.is_key_pressed(KEY_LEFT):
+		steer_val = 1.0
+	if Input.is_key_pressed(KEY_RIGHT):
+		steer_val = -1.0
 	
-func _input(event):
-	if not event is InputEventKey:
-		return
-	match event.scancode:
-		KEY_UP:
-			if event.pressed:
-				engine_force = engine_max
-			else:
-				engine_force = 0
-		KEY_DOWN:
-			if event.pressed:
-				engine_force = -engine_max
-			else:
-				engine_force = 0
-		KEY_LEFT:
-			if event.pressed:
-				steering = PI/6
-			else:
-				steering = 0
-		KEY_RIGHT:
-			if event.pressed:
-				steering = -PI/6
-			else:
-				steering = 0
-				
+	engine_force = throttle * engine_max
+	steering = steer_val * PI/6
 
-
-func _process(delta):
-	#	# Called every frame. Delta is time since last frame.
-	# Update game logic here.
-	#rotate_y(0.001)
-	#engine_force+=0.01
-	pass
